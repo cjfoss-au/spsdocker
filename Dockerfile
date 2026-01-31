@@ -19,6 +19,10 @@ RUN apt-get update && apt-get install -y \\
     avahi-utils \\
     libsoxr-dev \\
     libasound2-dev \\
+    libsndfile1-dev \\
+    libdaemon-dev \\
+    libdbus-1-dev \\
+    libsystemd-dev \\
     xmlto \\
     xsltproc \\
     pkg-config \\
