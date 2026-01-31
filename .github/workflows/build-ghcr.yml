@@ -10,7 +10,6 @@ permissions:
 
 jobs:
   build:
-    name: Build and publish to GHCR
     runs-on: ubuntu-latest
 
     steps:
