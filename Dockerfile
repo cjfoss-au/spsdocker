@@ -16,4 +16,5 @@ USER shairport
 
 EXPOSE 5000
 
-CMD ["shairport-sync", "-v"]
+ENTRYPOINT ["shairport-sync"]
+CMD ["-v"]
