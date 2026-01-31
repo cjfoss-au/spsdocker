@@ -3,30 +3,7 @@ FROM debian:stable-slim
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install build dependencies
-RUN apt-get update && apt-get install -y \\
-    build-essential \\
-    git \\
-    autoconf \\
-    automake \\
-    libtool \\
-    libpopt-dev \\
-    libconfig-dev \\
-    libssl-dev \\
-    libpulse-dev \\
-    libavahi-client-dev \\
-    libavahi-common-dev \\
-    avahi-daemon \\
-    avahi-utils \\
-    libsoxr-dev \\
-    libasound2-dev \\
-    libsndfile1-dev \\
-    libdaemon-dev \\
-    libdbus-1-dev \\
-    libsystemd-dev \\
-    xmlto \\
-    xsltproc \\
-    pkg-config \\
-  && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y build-essential git autoconf automake libtool libpopt-dev libconfig-dev libssl-dev libpulse-dev libavahi-client-dev libavahi-common-dev avahi-daemon avahi-utils libsoxr-dev libasound2-dev libsndfile1-dev libdaemon-dev libdbus-1-dev libsystemd-dev xmlto xsltproc pkg-config && rm -rf /var/lib/apt/lists/*
 
 # Get Shairport Sync source
 RUN git clone https://github.com/mikebrady/shairport-sync.git /shairport-sync
