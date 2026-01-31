@@ -1,0 +1,12 @@
+name: CI smoke test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Actions smoke test: OK"
