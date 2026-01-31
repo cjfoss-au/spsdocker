@@ -1,4 +1,4 @@
-This is my own docker image of the Shairport Sync project.
+This is my own docker image of Shairport Sync.
 
 https://github.com/mikebrady/shairport-sync
 
