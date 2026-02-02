@@ -9,7 +9,7 @@ RUN rm -rf /shairport-sync && git clone https://github.com/mikebrady/shairport-s
 WORKDIR /shairport-sync
 
 RUN autoreconf -fi \
-	&& ./configure --with-pa --with-avahi --with-ssl=openssl --with-mqtt --with-metadata --without-alsa | tee /configure.log \
+	&& ./configure --with-pa --with-avahi --with-ssl=openssl --with-mqtt-client --with-metadata --without-alsa | tee /configure.log \
 	&& make clean \
 	&& make -j$(nproc) \
 	&& make install
