@@ -1,8 +1,15 @@
 name: Build and publish to GHCR
 
+
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'Dockerfile'
+      - '.github/workflows/build-ghcr.yml'
+      - 'shairport-sync/**'
+      - '!README.md'
+      - '!**/*.md'
 
 permissions:
   contents: read
